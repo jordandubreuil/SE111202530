@@ -1,0 +1,47 @@
+/* CSS Comment */
+body{
+    background-color: darkgray;
+    background-image: linear-gradient(darkgray, white);
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content: center;
+    background-size:cover;
+    height: 100vh;
+}
+#main{
+    border:1px solid black;
+    width:750px;
+    border-radius: 10px;
+    background-color: darkgray;
+    box-shadow: 10px 10px 10px rgba(10, 10
+    , 10, 0.5);
+}
+h1{
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+h2{
+    padding: 10px;
+}
+
+li{
+    text-decoration: none;
+    display: inline;
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 25px;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    text-decoration: underline;
+}
+#footer{
+    text-align: center;
+}
