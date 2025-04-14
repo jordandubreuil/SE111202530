@@ -1,0 +1,114 @@
+@font-face {
+    font-family: BreakingBad;
+    src: url(../fonts/Heart_Breaking_Bad.otf);
+}
+html, body{
+    display: flex;
+    justify-content: center;
+    background-color: #093009;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main{
+    width: 1000px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #29773e;
+}
+#header{
+   /* font-family: "Special Gothic Expanded One", sans-serif; */
+   font-family: BreakingBad;
+  
+   
+}
+h1{
+    line-height: 100px;
+    margin-top:0px;
+    margin-bottom:0px;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 90px;
+    color: white;
+}
+h2{
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+#nav{
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.nav-btn:link{
+    color:white;
+    text-decoration: none;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.nav-btn:hover{
+    color:white;
+    text-decoration: underline;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+.nav-btn:visited{
+    color:white;
+    text-decoration: none;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin: 20px 0 20px 0;   
+}
+
+.side-btn:link{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.side-btn:hover{
+    padding: 10px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: grey;
+}
+
+#content{
+    float: left;
+    width:580px;
+    padding: 10px;
+   
+}
+#sidebar{
+    float: left;
+    padding: 10px;
+    width:380px;
+    
+}
+#footer{
+    clear: both;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.content-p{
+    color:white;
+}
+
+/* Image page CSS */
+.img-btn:link{
+    float: left;
+}
+.img-btn:hover{
+    float: left;
+    border: 1px solid white;
+}
