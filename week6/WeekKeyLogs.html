@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 Key Logs</title>
+    <style>
+        table, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="name">
+
+    
+    <script>
+        var textInput = document.querySelector("#name");
+        textInput.addEventListener("keyup", function(event){
+            console.log(event.key);
+            console.log(textInput);
+            console.log(event.target.value)
+            event.target.value = "This is my text now";
+        });
+    </script>
+
+    <h1>JavaScript and form Demo</h1>
+    <h2>Animal Year Calculator</h2>
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="first">First Name:</label></td>
+                <td><input type="text" name="first" id="first" placeholder="Type first name here..." required></td>
+            </tr>
+            <tr>
+                <td><label for="last">Last Name:</label></td>
+                <td><input type="text" name="last" id="last" placeholder="Type last name here..." required></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input type="text" name="age" id="age" placeholder="Type ge here..." required></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Get Age" id="get-age"></td>
+            </tr>
+        </table>
+    </form>
+    <div id="display-info">
+        Your info will be displayed here:
+    </div>
+    <!-- Links script to HTML -->
+    <script src="js/animalAgeCalculator.js"></script>
+</body>
+</html>

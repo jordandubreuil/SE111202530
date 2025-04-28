@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Week 6 | JavaScript Lab</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Week 6 JavaScript Lab</h1>
+        <p></p>
+        <button>Call Function</button>
+        <script>
+            //Line comment in JavaScript
+            /*
+            Multiline comment in JavaScript
+            */
+
+            var firstName = "Jordan";
+            var lastName = "Dubreuil";
+            //String using Concatonation
+            var message = firstName + " " + lastName;
+            console.log(message);
+            //String with literal notation
+            var messageLiteral = `${firstName} ${lastName}`;
+            console.log(messageLiteral);
+            //Alert Message to display data quickly. Typically not used in shipped site.
+            // alert(message);
+            // alert(messageLiteral);
+
+            function ouputToPage(tag, msg, color){
+                document.querySelector(tag).innerHTML = msg;
+                document.querySelector(tag).style.color = color;
+            }
+
+            ouputToPage("p", messageLiteral, "#0000ff");
+
+            //Event Handler Example
+            var promptButton = document.querySelector("button");
+
+            //Event listener using an anonymous funcion
+            // promptButton.addEventListener("click", ()=>{
+            //     ouputToPage("p", "Wouldn't you like to be a pepper too??", "#00ffff");
+            //     document.querySelector("p").style.fontFamily = "Arial";
+            // });
+
+            promptButton.addEventListener("click", dataPrompt);
+
+            function dataPrompt(){
+                alert(`My name is ${firstName} welcome to my program`);
+                var yourName = prompt("Please tell me your name.");
+                alert(`Hello ${yourName}, Nice to meet you.`);
+                var yourLastName = prompt('"Please" tell me your last name');
+                alert(`Your full name is ${yourName} ${yourLastName}`);
+
+                let firstNumber = prompt("What is your first number?");
+                let secondNumber = prompt("What is your second number??");
+
+                let result = Number(firstNumber) * Number(secondNumber);
+
+                alert(`This is your result ${result}.`);
+
+                //Example of JavaScript Creating elements
+                let documentBody = document.querySelector("body");
+                var outputElement = document.createElement("p");
+
+                outputElement.innerHTML = `Your name is  ${yourName} ${yourLastName} <br>The result of your numbers is ${result}<br>Thank you,<br> ${firstName} ${lastName}`;
+                documentBody.appendChild(outputElement); 
+            }
+        </script>
+    </body>
+</html>
