@@ -61,7 +61,8 @@
                 //Example of JavaScript Creating elements
                 let documentBody = document.querySelector("body");
                 var outputElement = document.createElement("p");
-
+                var outputData =  `Your name is  ${yourName} ${yourLastName} \nThe result of your numbers is ${result}\nThank you,\n ${firstName} ${lastName}`;
+                console.log(outputData);
                 outputElement.innerHTML = `Your name is  ${yourName} ${yourLastName} <br>The result of your numbers is ${result}<br>Thank you,<br> ${firstName} ${lastName}`;
                 documentBody.appendChild(outputElement); 
             }
