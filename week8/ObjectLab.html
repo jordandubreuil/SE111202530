@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 | More Objects and Arrays</title>
+</head>
+<body>
+    <h1>More Objects and Arrays</h1>
+
+    <script>
+        //Another way to define an array
+        var drinks = new Array();
+
+        //Add entries here
+        drinks[0] = "Coffee";
+        drinks[1] = "Energy Drink";
+        drinks[2] = "Juice";
+        drinks[3] = "Tea";
+        drinks[4] = "Water";
+        drinks[5] = "Soda";
+        drinks[6] = "Lemonade";
+        drinks[7] = "Milk";
+        drinks[8] = "Tequila";
+        drinks[9] = "Whiskey";
+
+        console.log(drinks);
+        console.log(drinks[5]);
+
+        //Push adds items to the array
+        //drinks.push("Beer");
+        //Removes the last element of the array
+        //drinks.pop();
+        //Splice takes out a range of items in an array and reorders them.
+       // drinks.splice(3,1);
+
+        var page = document.querySelector('body');
+
+        for(let i = 0; i<drinks.length; i++){
+            //Output the collection to the page
+            page.innerHTML += `<p>${drinks[i]}</p>`;
+        }
+
+            var drinkTypes = [
+                "Caffeinated beverage",
+                "Soft Drink",
+                "Juice",
+                "Caffeinated beverage",
+                "Water",
+                "Soft Drink",
+                "Soft Drink",
+                "Milk",
+                "Hard Liquor",
+                "Hard Liquor"
+            ];
+        
+        //For loop for Parallel Array
+        for(let i = 0; i<drinks.length; i++){
+            console.log(`Drink: ${drinks[i]}, Drink Type: ${drinkTypes[i]}`);
+        }
+    </script>
+</body>
+</html>
