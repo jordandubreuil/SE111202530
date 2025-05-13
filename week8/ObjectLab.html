@@ -58,6 +58,103 @@
         for(let i = 0; i<drinks.length; i++){
             console.log(`Drink: ${drinks[i]}, Drink Type: ${drinkTypes[i]}`);
         }
+
+        //2 Dimensional Arrays
+        var drinksAndType = [];
+        drinksAndType[0] = drinks;
+        drinksAndType[1] = drinkTypes;
+
+        for(let i = 0; i<drinks.length; i++){ 
+            
+            console.log(drinksAndType[0][i], drinksAndType[1][i]);
+
+        }
+
+        //Associative Arrays
+
+        var sportsTeams = [];
+        sportsTeams["baseball"] = "Red Sox";
+        sportsTeams["basketball"] = "Celtics";
+        sportsTeams["football"] = "Patriots";
+        sportsTeams["hockey"] = "Bruins";
+
+        console.log(sportsTeams["hockey"]);
+
+        //JavaScript Object notation examples
+        var tigerKingCastMember = {
+            name:"Joe Exotic the Tiger King",
+            occupation: "Tiger Handler",
+            residence:"Oklahoma",
+            incarcerated:true,
+            lovesTigers:true,
+            age:62,
+            sayHello:function(){
+                console.log(`Hello from ${this.name}`)
+            }
+        }
+
+        var tigerKingCastMember2 = {
+            name:"Carole Baskin",
+            occupation: "CEO Big Cat Rescue",
+            residence:"Florida",
+            incarcerated:false,
+            lovesTigers:false,
+            age:63,
+            sayHello:function(){
+                console.log(`Hello from ${this.name}`)
+            }
+        }
+
+        var tigerKingCastMember3 = {
+            name:"Jeff Lowe",
+            occupation: "Con Man",
+            residence:"Oklahoma",
+            incarcerated:true,
+            lovesTigers:true,
+            age:67,
+            sayHello:function(){
+                console.log(`Hello from ${this.name}`)
+            }
+        }
+
+        var tigerKingCastMember4 = {
+            name:"Don Lewis",
+            occupation: "Tiger Handler",
+            residence:"Florida",
+            incarcerated:false,
+            lovesTigers:true,
+            age:84,
+            sayHello:function(){
+                console.log(`Hello from ${this.name}`)
+            }
+        }
+
+        var person = new tigerKingCastMember();
+
+        person.occupation = "Scientist";
+        person.name = "Jordan"
+
+        var characters = [
+            tigerKingCastMember,
+            tigerKingCastMember2,
+            tigerKingCastMember3,
+            tigerKingCastMember4,
+            person
+        ]
+
+        //example of forEach loop
+        characters.forEach(function(item, character){
+            console.log(item.name, item.occupation, item.incarcerated);
+        });
+
+        // Example of for in loop
+        for(let key in characters){
+            console.log(key);
+            page.innerHTML += `<p>${characters[key].name}, Age: ${characters[key].age}, Occupation: ${characters[key].occupation}</p>`;
+            characters[key].sayHello();
+        }
+
+
     </script>
 </body>
 </html>
